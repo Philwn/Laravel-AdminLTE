@@ -8,14 +8,19 @@ This Package uses the following (possibly more depending on what AdminLTE ships 
 
 [Laravel](http://laravel.com)  (version 5.1.26 (LTS))
 The PHP framework of choice
+
 [Bootstrap](http://getbootstrap.com/) Version(3.3.5)
 Bootstrap ships with Laravel anyway and the free admin theme is also based on Bootstrap 3
+
 [AdminLTE](https://almsaeedstudio.com/)  (version 2.3.2)
 Free Open source Bootstrap Admin Theme
+
 [CKEditor](http://ckeditor.com/)
 Used as my Content Editor within the CMS, Shipped with AdminLTE Theme.
+
 [dataTables](https://datatables.net/) (version 1.10.7)
 Used for pagination/search/sortability of large HTMl Tables e.g Large table showing all blog posts
+
 [laravelcollective/html](https://laravelcollective.com/docs/5.1/html)
 Laravel Collective maintain components removed from the main Framework. This is a HTMl and form builder addon.
 
