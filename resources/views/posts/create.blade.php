@@ -19,29 +19,18 @@
                 
                 <div class="box-body">
                     
-                    <form class="form-horizontal">
+                    {!! Form::open(['url' => route('posts.store'), 'role' => 'form', 'class' => 'form-horizontal', 'method' => 'POST']) !!}
               
-                		<div class="form-group">
-                  			<label for="postTitle" class="col-sm-2 control-label">Post Title</label>
+                    @include('posts._form')
 
-                  			<div class="col-sm-6">
-                    			<input class="form-control" id="postTitle" placeholder="Title" type="title">
-                  			</div>
-                		</div>
-                		<div class="form-group">
-                  			<label for="body" class="col-sm-2 control-label">Body</label>
-
-                  			<div class="col-sm-10">
-                    			<textarea name="body" class="form-control ckeditor"></textarea>
-                			</div>
-                		</div>
+                		
               
               <!-- /.box-body -->
               			<div class="box-footer">
                 			<button type="submit" class="btn btn-info pull-right">Save Post</button>
               			</div>
               <!-- /.box-footer -->
-            		</form>
+            		{!! Form::close() !!}
                     
 
                 </div><!-- /.box-body -->

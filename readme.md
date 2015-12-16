@@ -22,7 +22,7 @@ Used as my Content Editor within the CMS, Shipped with AdminLTE Theme.
 Used for pagination/search/sortability of large HTMl Tables e.g Large table showing all blog posts
 
 [laravelcollective/html](https://laravelcollective.com/docs/5.1/html)
-Laravel Collective maintain components removed from the main Framework. This is a HTMl and form builder addon.
+Laravel Collective maintain components removed from the main Framework. This is a HTML and form builder addon.
 
 ## Contributing
 
