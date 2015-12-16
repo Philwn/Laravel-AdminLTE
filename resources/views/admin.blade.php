@@ -16,6 +16,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="{{ asset('bower_components/admin-lte/plugins/datatables/dataTables.bootstrap.css') }}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('bower_components/admin-lte/dist/css/AdminLTE.min.css') }}">
   <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
@@ -23,6 +24,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
         apply the skin class to the body tag so the changes take effect.
   -->
   <link rel="stylesheet" href="{{ asset('bower_components/admin-lte/dist/css/skins/skin-blue.min.css') }}">
+  
+
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -63,14 +66,7 @@ desired effect
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1>
-        {{ $page_title or "Page Header" }}
-        <small>{{ $page_description or null }}</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Admin</a></li>
-        <li class="active">{{ $section or 'Dashboard' }}</li>
-      </ol>
+      @yield('PageHeader')
     </section>
 
     <!-- Main content -->
@@ -94,14 +90,26 @@ desired effect
 
 <!-- jQuery 2.1.4 -->
 <script src="{{ asset('bower_components/admin-lte/plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
+
+
 <!-- Bootstrap 3.3.5 -->
 <script src="{{ asset('bower_components/admin-lte/bootstrap/js/bootstrap.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('bower_components/admin-lte/dist/js/app.min.js') }}"></script>
 
+
+<script src="https://cdn.ckeditor.com/4.4.3/standard/ckeditor.js"></script>
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. Slimscroll is required when using the
      fixed layout. -->
+<script src="{{ asset('bower_components/admin-lte/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+     <script src="{{ asset('bower_components/admin-lte/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
+<script>
+     $(document).ready( function () {
+      $('#Table_List').DataTable();
+    } );
+     </script>
+     
 </body>
 </html>

@@ -1,29 +1,20 @@
 @extends('admin')
 
+@section('PageHeader')
+    <h1>
+        Create New User
+        <small>register a new admin account</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Admin</a></li>
+        <li class="active">Register User</li>
+      </ol>
+@endsection
+
+
 @section('content')
 <!-- BEGIN CONTENT BODY -->
 <div class="page-content">
-    <!-- BEGIN PAGE HEADER-->
-
-
-    <!-- BEGIN PAGE BAR -->
-    <div class="page-bar">
-        <ul class="page-breadcrumb">
-            <li>
-                <a href="{{ url('dashboard') }}">Home</a>
-                <i class="fa fa-circle"></i>
-            </li>
-            <li>
-                <span>Create Admin</span>
-            </li>
-        </ul>
-
-    </div>
-    <!-- END PAGE BAR -->
-    <!-- BEGIN PAGE TITLE-->
-    <h3 class="page-title"> Create
-        <small>Admin</small>
-    </h3>
     <!-- END PAGE TITLE-->
     <!-- END PAGE HEADER-->
     <!-- BEGIN DASHBOARD STATS 1-->
@@ -76,7 +67,7 @@
 
                                 <div class="form-group">
                                             <div class="col-md-offset-3 col-md-9">
-                                                <button class="btn green" type="submit">Register</button>
+                                                <button class="btn btn-success" type="submit">Register</button>
                                             </div>
                                 </div>
                             </form>

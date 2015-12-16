@@ -1,53 +1,64 @@
 @extends('admin')
 
+@section('PageHeader')
+    <h1>
+        Posts List
+        <small>view all existing Posts</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Admin</a></li>
+        <li class="active">Posts</li>
+      </ol>
+@endsection
+
 @section('content')
     <div class='row'>
-        <div class='col-md-6'>
+        <div class='col-md-12'>
             <!-- Box -->
             <div class="box box-primary">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Randomly Generated Tasks</h3>
-                    <div class="box-tools pull-right">
-                        <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
-                        <button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
-                    </div>
-                </div>
+                
                 <div class="box-body">
                     
-                        <h5>
-                            Task
-                            <small class="label label-blue pull-right">30%</small>
-                        </h5>
-                        <div class="progress progress-xxs">
-                            <div class="progress-bar progress-bar-blue" style="width: 30%"></div>
-                        </div>
+                    <table class="table table-striped table-bordered table-advance table-hover" id="Table_List">
+                        <thead>
+                            <tr>
+                                <th>Edit</th>
+                                <th>Show</th>
+                                <th>Hide</th>
+                                <th>Status</th>
+                                <th>Title</th>
+                                <th>Excerpt</th>
+                                <th>View</th>
+                                <th class="hidden-phone">Date</th>
+                                <th class="hidden-phone">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                                <tr>
+                                    <td class="highlight">
+                                        <div class="warning"></div>
+                                        <a href="#" class="btn btn-sm btn-info"><i class="fa fa-edit"></i></a>
+                                    </td>
+                                    <td><a href="#" class="btn btn-sm btn-success"><i class="fa fa-thumbs-up"></i></a></td>
+                                    <td><a href="#" class="btn btn-sm btn-warning"><i class="fa fa-thumbs-down"></i></a></td>
+                                    <td><span class="label label-warning">Pending</span></td>
+                                    <td>Post Title</td>
+                                    <td>Short excerpt about post (also used for meta)</td>
+                                    <td><a href="#" class="btn mini red">Preview</a></td>
+                                    <td class="hidden-phone">Date</td>
+                                    <td class="hidden-phone"><a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a></td>
+                                </tr>
+                                    
+                            </tbody>
+                        </table>
                     
 
                 </div><!-- /.box-body -->
-                <div class="box-footer">
-                    <form action='#'>
-                        <input type='text' placeholder='New task' class='form-control input-sm' />
-                    </form>
-                </div><!-- /.box-footer-->
+                <!-- /.box-footer-->
             </div><!-- /.box -->
         </div><!-- /.col -->
-        <div class='col-md-6'>
-            <!-- Box -->
-            <div class="box box-primary">
-                <div class="box-header with-border">
-                    <h3 class="box-title">Second Box</h3>
-                    <div class="box-tools pull-right">
-                        <button class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse"><i class="fa fa-minus"></i></button>
-                        <button class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove"><i class="fa fa-times"></i></button>
-                    </div>
-                </div>
-                <div class="box-body">
-                    A separate section to add any kind of widget. Feel free
-                    to explore all of AdminLTE widgets by visiting the demo page
-                    on <a href="https://almsaeedstudio.com">Almsaeed Studio</a>.
-                </div><!-- /.box-body -->
-            </div><!-- /.box -->
-        </div><!-- /.col -->
+      
 
     </div><!-- /.row -->
 @endsection
