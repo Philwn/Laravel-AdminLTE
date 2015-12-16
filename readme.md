@@ -24,6 +24,9 @@ Used for pagination/search/sortability of large HTMl Tables e.g Large table show
 [laravelcollective/html](https://laravelcollective.com/docs/5.1/html)
 Laravel Collective maintain components removed from the main Framework. This is a HTML and form builder addon.
 
+[Bootstrap-Tagsinput](https://github.com/bootstrap-tagsinput/bootstrap-tagsinput) (Version 0.7.1)
+Bootstrap user interface for managing tags in a form.
+
 ## Contributing
 
 I Consider myself a competent developer but no Expert, therefore I am willing to listen/review any suggestions/contributions which may better myself aswell as this starting package, However this is originally aimed at my own personal use.
