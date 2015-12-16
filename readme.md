@@ -1,27 +1,29 @@
-## Laravel PHP Framework
+## Laravel and AdminLTE Theme CMS
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+After recently moving to Laravel PHP framework and creating a couple of projects involving a CMS Panel i decided to create a "Boiler Plate" for how they usually work. This package uses and includes an Open Source Bootstrap admin Theme call AdminLTE which also uses a combination of javascript/jquery plugins. This package is meant to provide me with a quick start when producing a new project that requires a CMS
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Resources
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+This Package uses the following (possibly more depending on what AdminLTE ships with)
 
-## Official Documentation
-
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+[Laravel](http://laravel.com)  (version 5.1.26 (LTS))
+The PHP framework of choice
+[Bootstrap](http://getbootstrap.com/) Version(3.3.5)
+Bootstrap ships with Laravel anyway and the free admin theme is also based on Bootstrap 3
+[AdminLTE](https://almsaeedstudio.com/)  (version 2.3.2)
+Free Open source Bootstrap Admin Theme
+[CKEditor](http://ckeditor.com/)
+Used as my Content Editor within the CMS, Shipped with AdminLTE Theme.
+[dataTables](https://datatables.net/) (version 1.10.7)
+Used for pagination/search/sortability of large HTMl Tables e.g Large table showing all blog posts
+[laravelcollective/html](https://laravelcollective.com/docs/5.1/html)
+Laravel Collective maintain components removed from the main Framework. This is a HTMl and form builder addon.
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+I Consider myself a competent developer but no Expert, therefore I am willing to listen/review any suggestions/contributions which may better myself aswell as this starting package, However this is originally aimed at my own personal use.
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
 
 ### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+This package is an amalgamation of other Open Source work(s) customised to my own personal use and is also Open Source
