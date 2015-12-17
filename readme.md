@@ -27,6 +27,10 @@ Laravel Collective maintain components removed from the main Framework. This is 
 [Bootstrap-Tagsinput](https://github.com/bootstrap-tagsinput/bootstrap-tagsinput) (Version 0.7.1)
 Bootstrap user interface for managing tags in a form.
 
+[doctrine/dbal](https://github.com/doctrine/dbal) (2.4)
+
+[Intervention/Image](http://image.intervention.io/) (2.3)
+
 ## Contributing
 
 I Consider myself a competent developer but no Expert, therefore I am willing to listen/review any suggestions/contributions which may better myself aswell as this starting package, However this is originally aimed at my own personal use.
