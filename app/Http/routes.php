@@ -23,6 +23,8 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::get('upload', ['as' => 'upload', 'uses' => 'ImageController@getUpload']);
 Route::post('upload', ['as' => 'upload-post', 'uses' =>'ImageController@postUpload']);
 Route::post('upload/delete', ['as' => 'upload-remove', 'uses' =>'ImageController@deleteUpload']);
+Route::get('browse_images', 'AdminController@modal_images')->name('browse_images');
+
 
 Route::get('/', function () {
     return view('welcome');

@@ -8,8 +8,12 @@
 		<div class="form-group">
      		{!! Form::label('image', 'Image', ['class' => 'col-md-2 control-label']) !!}
      		
-         	{!! Form::hidden('image', null, ['id' => 'image']) !!}
-     		
+         	{!! Form::hidden('image_id', null, ['id' => 'image']) !!}
+     		<div class="col-md-3">
+        <a name="show_media_modal" href="{{ URL::route('browse_images') }}" data-width="600" data-height="400" data-ratio="1.5" data-remote="false" data-toggle="modal" data-target="#browse" class="btn btn-outline purple btn-info">
+            Browse
+        </a>
+      </div>
      		<div class="col-md-3">
         		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#upload">Upload</button>
 		    </div>

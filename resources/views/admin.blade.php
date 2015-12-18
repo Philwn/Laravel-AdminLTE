@@ -114,6 +114,11 @@ desired effect
      $(document).ready( function () {
       $('#Table_List').DataTable();
     } );
+
+     $("#browse").on("show.bs.modal", function(e) {
+                var link = $(e.relatedTarget);
+                $(this).find(".modal-body").load(link.attr("href"));
+            });
      </script>
      
 </body>
