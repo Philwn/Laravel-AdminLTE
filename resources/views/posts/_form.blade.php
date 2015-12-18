@@ -18,8 +18,8 @@
   			{!! Form::label('excerpt', 'Excerpt', ['class' => 'col-md-2 control-label']) !!}
 
   			<div class="col-sm-7">
-    			{!! Form::textarea('body', null, ['class' => 'form-control', 'rows' => '3']) !!}
-        		{!! $errors->first('body', '<span class="help-block">:message</span>') !!}
+    			{!! Form::textarea('excerpt', null, ['class' => 'form-control', 'rows' => '3']) !!}
+        		{!! $errors->first('excerpt', '<span class="help-block">:message</span>') !!}
 			</div>
 		</div>
 		<div class="form-group">

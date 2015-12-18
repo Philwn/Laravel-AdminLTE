@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Tag;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Http\Requests\CreatePostRequest;
 use App\Http\Controllers\Controller;
 
 class PostController extends Controller
@@ -36,9 +38,19 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CreatePostRequest $request, Post $post)
     {
-        //
+        $request->merge([
+            'slug' => str_slug($request->get('title')),
+            'display' => 1,
+        ]);
+        $store = $post->create($request->all());
+        $tags = tags_to_array($request->get('tags'));
+        foreach($tags as $tag){
+            $tag = Tag::firstOrCreate(['name' => $tag]);
+            $store->tags()->attach($tag);
+        }
+        return redirect(route('admin.posts'));
     }
 
     /**
