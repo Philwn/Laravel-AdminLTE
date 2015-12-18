@@ -24,6 +24,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         apply the skin class to the body tag so the changes take effect.
   -->
   <link href="{{asset('plugins/bootstrap-tagsinput/bootstrap-tagsinput.css')}}" rel="stylesheet" type="text/css"/>
+  <link href="{{asset('plugins/dropzone/dropzone.min.css')}}" rel="stylesheet" type="text/css"/>
   <link rel="stylesheet" href="{{ asset('bower_components/admin-lte/dist/css/skins/skin-blue.min.css') }}">
   @yield('styles')
 
@@ -88,6 +89,7 @@ desired effect
 <!-- ./wrapper -->
 
 <!-- REQUIRED JS SCRIPTS -->
+@include('admin.uploadModal')
 
 <!-- jQuery 2.1.4 -->
 <script src="{{ asset('bower_components/admin-lte/plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
@@ -105,6 +107,7 @@ desired effect
      user experience. Slimscroll is required when using the
      fixed layout. -->
 <script src="{{ asset('bower_components/admin-lte/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{asset('plugins/dropzone/dropzone.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js')}}" type="text/javascript"></script>
 <script src="{{ asset('bower_components/admin-lte/plugins/datatables/dataTables.bootstrap.min.js') }}"></script>
 <script>
