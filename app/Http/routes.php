@@ -30,12 +30,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('admin', function () {
-    return view('admin.dashboard');
-});
+Route::get('admin', 'AdminController@dashboard')->name('admin.dashboard');
 
-Route::get('admin/posts', function () {
-    return view('admin.posts');
-})->name('admin.posts');
+Route::get('admin/settings', 'AdminController@settings')->name('admin.settings');
+Route::put('admin/settings', 'AdminController@updateSettings')->name('settings.update');
+
+Route::get('admin/posts', 'AdminController@posts')->name('admin.posts');
 
 Route::resource('posts', 'PostController');

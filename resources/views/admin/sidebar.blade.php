@@ -31,8 +31,8 @@
         <ul class="sidebar-menu">
             <li class="header">HEADER</li>
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="#"><i class="fa fa-dashboard text-success"></i><span>Link</span></a></li>
-            <li><a href="#"><i class="fa fa-circle text-success"></i><span>Another Link</span></a></li>
+            <li class="active"><a href="{{ route('admin.dashboard') }}"><i class="fa fa-dashboard text-success"></i><span>Dashboard</span></a></li>
+            <li><a href="{{ route('admin.settings') }}"><i class="fa fa-gears text-success"></i><span>Website Settings</span></a></li>
             <li class="treeview">
                 <a href="#">
                 	<i class="fa fa-newspaper-o text-success"></i>
