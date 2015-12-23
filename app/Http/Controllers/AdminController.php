@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\ImageModel;
 use App\Setting;
+use App\Post;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
@@ -33,6 +34,9 @@ class adminController extends Controller
     }
 
     public function posts() {
-    	return view('admin.posts');
+        $posts = Post::orderBy('updated_at', 'desc')->get();
+    	return view('admin.posts')->with([
+            'posts' => $posts,
+            ]);
     }
 }

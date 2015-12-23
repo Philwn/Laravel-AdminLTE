@@ -19,7 +19,7 @@
                 
                 <div class="box-body">
                     
-                    {!! Form::open(['url' => route('posts.update'), 'role' => 'form', 'class' => 'form-horizontal', 'method' => 'PATCH']) !!}
+                    {!! Form::model($post, ['url' => route('posts.update'), 'role' => 'form', 'class' => 'form-horizontal', 'method' => 'PATCH']) !!}
               
                     @include('posts._form')
 

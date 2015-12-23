@@ -35,20 +35,22 @@
                         </thead>
                         <tbody>
 
+                            @foreach($posts as $post)
                                 <tr>
                                     <td class="highlight">
                                         <div class="warning"></div>
-                                        <a href="#" class="btn btn-sm btn-info"><i class="fa fa-edit"></i></a>
+                                        <a href="{{ URL::route('posts.edit', ['id' => $post->id]) }}" class="btn btn-sm btn-info"><i class="fa fa-edit"></i></a>
                                     </td>
                                     <td><a href="#" class="btn btn-sm btn-success"><i class="fa fa-thumbs-up"></i></a></td>
                                     <td><a href="#" class="btn btn-sm btn-warning"><i class="fa fa-thumbs-down"></i></a></td>
                                     <td><span class="label label-warning">Pending</span></td>
-                                    <td>Post Title</td>
-                                    <td>Short excerpt about post (also used for meta)</td>
+                                    <td>{{ $post->title }}</td>
+                                    <td>{{ $post->excerpt }}</td>
                                     <td><a href="#" class="btn mini red">Preview</a></td>
                                     <td class="hidden-phone">Date</td>
                                     <td class="hidden-phone"><a href="#" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a></td>
                                 </tr>
+                                @endforeach
                                     
                             </tbody>
                         </table>

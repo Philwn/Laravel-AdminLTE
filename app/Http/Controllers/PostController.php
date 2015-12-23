@@ -72,7 +72,10 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        return view('posts.edit');
+        $post = Post::find($id);
+        return view('posts.edit')->with([
+            'post' => $post,
+            ]);
     }
 
     /**
@@ -84,7 +87,15 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::find($id);
+        $post->fill($request->input())->save();
+        $tags = tags_to_array($request->get('tags'));
+        foreach($tags as $tag){
+            $tag = Tag::firstOrCreate(['name' => $tag]);
+            $post->tags()->detach($tag);
+            $post->tags()->attach($tag);
+        }
+        return redirect(route('admin.posts'));
     }
 
     /**
